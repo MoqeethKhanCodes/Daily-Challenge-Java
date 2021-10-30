@@ -1,7 +1,7 @@
 package com.moqeethcodes;
 
 public class BankAccount {
-    private long accountNumber;
+    private String accountNumber;
     private double balance;
     private String customerName;
     private String emailId;
@@ -12,7 +12,7 @@ public class BankAccount {
         System.out.println("Empty Constructor called");
     }
 
-    public BankAccount(long accountNumber, double balance, String customerName, String emailId, String phoneNumber) {
+    public BankAccount(String accountNumber, double balance, String customerName, String emailId, String phoneNumber) {
         this.accountNumber = accountNumber;
         this.balance = balance;
         this.customerName = customerName;
@@ -20,7 +20,15 @@ public class BankAccount {
         this.phoneNumber = phoneNumber;
     }
 
-    public void setAccountNumber(long accountNumber) {
+    public BankAccount(String customerName, String emailId, String phoneNumber) {
+        this("99999",100.55, customerName, emailId, phoneNumber);
+        // acc no. and balance not getting updated
+        /*this.customerName = customerName;
+        this.emailId = emailId;
+        this.phoneNumber = phoneNumber;*/
+    }
+
+    public void setAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
     }
 
@@ -40,7 +48,7 @@ public class BankAccount {
         this.phoneNumber = phoneNumber;
     }
 
-    public long getAccountNumber() {
+    public String getAccountNumber() {
         return this.accountNumber;
     }
 
