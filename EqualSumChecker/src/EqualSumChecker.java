@@ -1,8 +1,5 @@
 public class EqualSumChecker {
-    public static boolean hasEqualSum(int firstNumber,int secondNumber, int thirdNumber){
-        if(firstNumber+secondNumber==thirdNumber){
-            return true;
-        }
-        return false;
+    public static boolean hasEqualSum(int firstValue, int secondValue, int thirdValue) {
+        return thirdValue == (firstValue + secondValue);
     }
 }
