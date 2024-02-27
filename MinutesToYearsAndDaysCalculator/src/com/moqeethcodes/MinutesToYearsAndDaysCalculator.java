@@ -14,7 +14,5 @@ public class MinutesToYearsAndDaysCalculator {
             long days = (minutes % 525600) / 1440;
             System.out.println(minutes + " min = " + years + " y and " + days + " d");
         }
-
-
     }
 }

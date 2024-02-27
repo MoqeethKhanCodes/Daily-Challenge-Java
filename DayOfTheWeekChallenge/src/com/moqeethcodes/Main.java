@@ -9,6 +9,7 @@ public class Main {
         DayOfTheWeekChallenge.printDayOfTheWeek(4);
         DayOfTheWeekChallenge.printDayOfTheWeek(5);
 
+        System.out.println("------------------------");
 
         DaysOfTheWeekUsingIfElse.printDayOftheWeek(1);
         DaysOfTheWeekUsingIfElse.printDayOftheWeek(2);

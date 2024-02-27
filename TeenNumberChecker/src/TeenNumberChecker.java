@@ -1,10 +1,11 @@
 public class TeenNumberChecker {
-    public static boolean hasTeen(int firstAge, int secondAge, int thirdAge){
+    public static boolean hasTeen (int firstPersonAge, int secondPersonAge, int thirdPersonAge) {
 
-        return  isTeen(firstAge)||isTeen(secondAge)||isTeen(thirdAge);
+        return isTeen(firstPersonAge) || isTeen(secondPersonAge) || isTeen(thirdPersonAge) ;
+    }
 
-        }
-    public static boolean isTeen(int num){
-        return (num >= 13 && num <= 19);
+    public static boolean isTeen (int age) {
+
+        return (age >= 13 && age <= 19) ;
     }
 }

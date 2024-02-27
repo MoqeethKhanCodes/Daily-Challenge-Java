@@ -5,8 +5,7 @@ public class PlayingCat {
 
     public static boolean isCatPlaying(boolean summer, int temperature){
 
-        int upperLimit = summer ? 45 : 35;
-        return temperature >= 25 && temperature <= upperLimit;
+        return summer ? (temperature >= 25 && temperature <= 45) : (temperature >= 25 && temperature <= 35);
 
     }
 }
