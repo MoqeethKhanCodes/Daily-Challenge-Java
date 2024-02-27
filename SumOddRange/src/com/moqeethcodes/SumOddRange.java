@@ -10,17 +10,12 @@ public class SumOddRange {
             return false;
         }
 
-        if(number % 2 != 0){
-            return true;
-        }
-        else {
-            return false;
-        }
+        return number % 2 != 0;
     }
 
     public static int sumOdd(int start, int end){
 
-        if((end < start) ||(start < 0) || (end < 0)){
+        if(end < start || start < 0){
             return INVALID_CONDITION;
         }
 
