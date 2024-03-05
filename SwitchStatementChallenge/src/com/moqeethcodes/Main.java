@@ -1,15 +1,15 @@
 package com.moqeethcodes;
 
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        /*Scanner sc = new Scanner(System.in);
-        char value = sc.next().charAt(0);*/
-        char value = 'D';
+        System.out.println("Choose : \nOption A\nOption B\nOption C\nOption D\nOption E\n Others ");
+        Scanner sc = new Scanner(System.in);
+        char value = sc.next().charAt(0);
+
         switch (value){
             case 'A':
                 System.out.println("Value was A");
@@ -25,42 +25,44 @@ public class Main {
                 break;
         }
 
-        String month = "January";
-        switch (month.toLowerCase()){
-            case "january":
+        System.out.println("\n Enter Month : ");
+        sc.nextLine();
+        String month = sc.nextLine();
+        switch (month.toUpperCase()){
+            case "JANUARY":
                 System.out.println("Jan");
                 break;
-            case "Febuary":
+            case "FEBRUARY":
                 System.out.println("Feb");
                 break;
-            case "March":
+            case "MARCH":
                 System.out.println("Mar");
                 break;
-            case "April":
+            case "APRIL":
                 System.out.println("Apr");
                 break;
-            case "May":
+            case "MAY":
                 System.out.println("May");
                 break;
-            case "June":
+            case "JUNE":
                 System.out.println("June");
                 break;
-            case "July":
+            case "JULY":
                 System.out.println("July");
                 break;
-            case "August":
+            case "AUGUST":
                 System.out.println("Aug");
                 break;
-            case "September":
+            case "SEPTEMBER":
                 System.out.println("Sept");
                 break;
-            case "October":
+            case "OCTOBER":
                 System.out.println("Oct");
                 break;
-            case "November":
+            case "NOVEMBER":
                 System.out.println("Nov");
                 break;
-            case "December":
+            case "DECEMBER":
                 System.out.println("Dec");
                 break;
             default:
