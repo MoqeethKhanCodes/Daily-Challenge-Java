@@ -2,36 +2,27 @@ package com.moqeethcodes;
 
 public class NumberOfDaysInMonth {
 
-    public static boolean isLeapYear(int year){
-        if(year < 1 || year > 9999 ){
-            return false;
+    private static final int INVALID_VALUE = -1;
+
+    public static boolean isLeapYear(int year) {
+        if (year >= 1 && year <= 9999) {
+            return (year % 4 == 0 && year % 100 != 0) || (year % 4 == 0 && year % 100 == 0 && year % 400 == 0);
         }
-        else{
-            if((year % 4 == 0  && year % 100 != 0) || year % 400 == 0){
-                return true;
-            }
-            else {
-                return false;
-            }
-        }
+
+        return false;
     }
 
-    private static final int INVALID_VALUE = -1;
     public static int getDaysInMonth(int month, int year){
         if((month < 1 || month > 12) || (year < 1 || year > 9999)){
-            return INVALID_VALUE;
+            return -1;
         }
         if (isLeapYear(year) && month == 2){
             return 29;
         }
-       switch (month){
-           case 11: case 9: case 6: case 4:
-               return 30;
-
-           case 2:
-               return 28;
-           default:
-               return 31;
-       }
+        return switch (month) {
+            case 11, 9, 6, 4 -> 30;
+            case 2 -> 28;
+            default -> 31;
+        };
     }
 }
