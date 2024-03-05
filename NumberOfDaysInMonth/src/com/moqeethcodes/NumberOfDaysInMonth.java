@@ -1,5 +1,7 @@
 package com.moqeethcodes;
 
+import java.util.Calendar;
+
 public class NumberOfDaysInMonth {
 
     private static final int INVALID_VALUE = -1;
@@ -12,11 +14,11 @@ public class NumberOfDaysInMonth {
         return false;
     }
 
-    public static int getDaysInMonth(int month, int year){
-        if((month < 1 || month > 12) || (year < 1 || year > 9999)){
+    public static int getDaysInMonth(int month, int year) {
+        if ((month < 1 || month > 12) || (year < 1 || year > 9999)) {
             return -1;
         }
-        if (isLeapYear(year) && month == 2){
+        if (isLeapYear(year) && month == 2) {
             return 29;
         }
         return switch (month) {
@@ -24,5 +26,15 @@ public class NumberOfDaysInMonth {
             case 2 -> 28;
             default -> 31;
         };
+    }
+
+    public static int getDaysInMonthAlternate(int month, int year) {
+        if ((month < 1 || month > 12) || (year < 1 || year > 9999)) {
+            return -1;
+        }
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(Calendar.MONTH, month - 1);
+        calendar.set(Calendar.YEAR, year);
+        return calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
     }
 }
