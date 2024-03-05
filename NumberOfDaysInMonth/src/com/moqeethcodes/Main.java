@@ -9,6 +9,8 @@ public class Main {
         System.out.println(NumberOfDaysInMonth.getDaysInMonth(-1,287254));
         System.out.println(NumberOfDaysInMonth.getDaysInMonth(2,2000));
 
+        System.out.println("\n------------------------------------------\n");
+
         System.out.println(NumberOfDaysInMonth.getDaysInMonthAlternate(2,2020));
         System.out.println(NumberOfDaysInMonth.getDaysInMonthAlternate(1,2021));
         System.out.println(NumberOfDaysInMonth.getDaysInMonthAlternate(-1,287254));
