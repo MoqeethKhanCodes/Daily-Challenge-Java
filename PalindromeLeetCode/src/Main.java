@@ -1,8 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-        int[] intArray = {1, 100, 121, 123, -121, -1}; //add cases
+        int[] intArray = {0, 1, 10, 20, -10, 100, 121, 123, -121, -1}; //add cases
         for (int integer : intArray) {
-            System.out.println(integer + " -> " + isPalindrome(integer));
+            System.out.println(integer + " -> " + isPalindromeBestCase(integer));
         }
     }
 
@@ -15,6 +15,19 @@ public class Main {
             temp /= 10;
         }
 
-        return x > 0 && x == reversed;
+        return x >= 0 && x == reversed;
+    }
+
+    public static boolean isPalindromeBestCase(int x) {
+        if (x < 0 || (x % 10 == 0 && x != 0)) {
+            return false;
+        }
+        int reversed = 0;
+        while (x > reversed) {
+            reversed = reversed * 10 + x % 10;
+            x /= 10;
+        }
+
+        return x == reversed || x == reversed / 10;
     }
 }
