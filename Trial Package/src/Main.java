@@ -1,3 +1,5 @@
+import java.util.HashSet;
+
 public class Main {
     public static void main(String[] args) {
         /*int answer = numberChallenge(0, 1000);
@@ -12,7 +14,9 @@ public class Main {
 
         //System.out.println(sumFirstAndLastDigit1(5));
 
-        System.out.println(getEvenDigitSum(123456789));
+        //System.out.println(getEvenDigitSum(123456789));
+
+        System.out.println(hasSharedDigitOptimized(99,91));
     }
 
     public static int numberChallenge(int low, int high) {
@@ -111,15 +115,15 @@ public class Main {
         if(number < 0) {
             return -1;
         }
-        int temporaryNumber = number;
+
         int sumOfEvenDigits = 0;
-        while (temporaryNumber != 0) {
-            int currentDigit = temporaryNumber % 10;
+        while (number != 0) {
+            int currentDigit = number % 10;
 
             if (isEven(currentDigit)) {
                 sumOfEvenDigits += currentDigit;
             }
-            temporaryNumber /= 10;
+            number /= 10;
         }
         return sumOfEvenDigits;
 
@@ -158,6 +162,39 @@ public class Main {
         // n&1 is 1, then
         // odd, else even
         return (n & 1);
+    }
+
+    public static boolean hasSharedDigit (int firstNumber, int secondNumber) {
+        if (firstNumber < 10 || firstNumber > 99 || secondNumber < 10 || secondNumber > 99) {
+            return false;
+        }
+        HashSet<Integer> uniqueNums = new HashSet<>();
+
+        while(firstNumber != 0) {
+            int currentDigit = firstNumber % 10;
+            uniqueNums.add(currentDigit);
+            firstNumber /= 10;
+        }
+        while(secondNumber != 0) {
+            if (uniqueNums.contains(secondNumber % 10)) {
+                return true;
+            }
+            secondNumber /= 10;
+        }
+        return false;
+    }
+
+    public static boolean hasSharedDigitOptimized(int firstNumber, int secondNumber) {
+        if (firstNumber < 10 || firstNumber > 99 || secondNumber < 10 || secondNumber > 99) {
+            return false;
+        }
+        int firstNoFirstDigit = firstNumber / 10;
+        int firstNoSecondDigit = firstNumber % 10;
+
+        int secondNoFirstDigit = secondNumber / 10;
+        int secondNoSecondDigit = secondNumber % 10;
+
+        return firstNoFirstDigit == secondNoFirstDigit || firstNoFirstDigit == secondNoSecondDigit || firstNoSecondDigit == secondNoFirstDigit || firstNoSecondDigit == secondNoSecondDigit;
     }
 
 }

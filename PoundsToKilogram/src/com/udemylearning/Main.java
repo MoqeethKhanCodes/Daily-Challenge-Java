@@ -7,6 +7,6 @@ public class Main {
         double pounds;
         double kilogram;
 
-        double pound = ;
+
     }
 }
