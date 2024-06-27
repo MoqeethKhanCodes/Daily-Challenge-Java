@@ -36,4 +36,19 @@ public class Main {
 
         }
     }
+
+    private static int sumDigits1 (int number) {
+        int sum = 0;
+        if(number < 0){
+            return INVALID_NUMBER;
+        }
+        while (number > 0) {
+            int lastDigit = number % 10;
+            sum = sum + lastDigit;
+            number = number / 10;
+        }
+
+        return sum;
+    }
+
 }
