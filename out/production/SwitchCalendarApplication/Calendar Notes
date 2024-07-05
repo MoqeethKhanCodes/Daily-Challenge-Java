@@ -1,0 +1,9 @@
+// SimpleDateFormat has been deprecated since Java 9 due to thread safety and localization.
+        /*SimpleDateFormat format = new SimpleDateFormat("dd MMMM yyyy");
+        try {
+            Date formattedDate = format.parse(date);
+
+
+        }catch (ParseException parseException) {
+            logger.log(Level.SEVERE, "Error parsing date", parseException);
+        }*/
