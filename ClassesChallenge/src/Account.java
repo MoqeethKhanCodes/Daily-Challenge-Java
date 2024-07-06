@@ -4,9 +4,21 @@ public class Account {
     private String customerName;
     private String customerEmail;
 
-    //constructor
+    //constructor chaining with constructor overloading and default constructor
     public Account() {
         System.out.println("Empty Constructor have been invoked");
+    }
+
+    public Account(String accountNumber) {
+        this(accountNumber, 0.0, null, null);
+    }
+
+    public Account(String accountNumber, double accountBalance) {
+        this(accountNumber, accountBalance, null, null);
+    }
+
+    public Account(String accountNumber, double accountBalance, String customerName) {
+        this(accountNumber, accountBalance, customerName, null);
     }
 
     public Account(String accountNumber, double accountBalance, String name, String email) {
