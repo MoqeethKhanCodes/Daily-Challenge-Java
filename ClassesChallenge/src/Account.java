@@ -2,7 +2,20 @@ public class Account {
     private String accountNumber;
     private double accountBalance;
     private String customerName;
-    private String email;
+    private String customerEmail;
+
+    //constructor
+    public Account() {
+        System.out.println("Empty Constructor have been invoked");
+    }
+
+    public Account(String accountNumber, double accountBalance, String name, String email) {
+        System.out.println("Account Constructor with parameter is called");
+        this.accountNumber = accountNumber;
+        this.accountBalance = accountBalance;
+        customerName = name; // Valid only if local variable doesn't match with instance field.
+        customerEmail = email;
+    }
 
     public String getAccountNumber() {
         return accountNumber;
@@ -28,12 +41,12 @@ public class Account {
         this.customerName = customerName;
     }
 
-    public String getEmail() {
-        return email;
+    public String getCustomerEmail() {
+        return customerEmail;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setCustomerEmail(String customerEmail) {
+        this.customerEmail = customerEmail;
     }
 
     public void depositFunds (double amountToAdd) {
