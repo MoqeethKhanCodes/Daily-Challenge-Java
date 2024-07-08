@@ -22,7 +22,7 @@ public class Account {
     }
 
     public Account(String accountNumber, double accountBalance, String name, String email) {
-        System.out.println("Account Constructor with parameter is called");
+        System.out.println("--------------------------------\nAccount Constructor with parameter is called");
         this.accountNumber = accountNumber;
         this.accountBalance = accountBalance;
         customerName = name; // Valid only if local variable doesn't match with instance field.
@@ -61,16 +61,17 @@ public class Account {
         this.customerEmail = customerEmail;
     }
 
-    public void depositFunds (double amountToAdd) {
+    public void depositFunds(double amountToAdd) {
         this.accountBalance += amountToAdd;
         System.out.println("Deposit of $" + amountToAdd + " made. New Balance is $" + accountBalance);
     }
-    public void withdrawFunds (double amountToDeduct) {
-        if(this.accountBalance > 0
-                && this.accountBalance - amountToDeduct >= 0){
+
+    public void withdrawFunds(double amountToDeduct) {
+        if (this.accountBalance > 0
+                && this.accountBalance - amountToDeduct >= 0) {
             this.accountBalance -= amountToDeduct;
             System.out.println("Withdrawal of $" + amountToDeduct + " made. New Balance is $" + accountBalance);
-        }else {
+        } else {
             System.out.println("Insufficient Funds! \nYour balance is " + accountBalance);
         }
     }
