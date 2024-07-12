@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        WallArea wall = new WallArea(1.125,-1.0);
+        WallArea wall = new WallArea(1.125, -1.0);
         System.out.println("area= " + wall.getArea());
 
         wall.setHeight(-1.5);
