@@ -21,7 +21,26 @@ public class Main {
                     }, "Java Batch");
             System.out.println(s);
         }
-    }
+        System.out.println("---------------------------\nDifferences | POJO vs Record\n");
+        Student pojoStudent = new Student("S9554215", "Ann","05/11/1997", "Python Batch");
+
+        Records_Student recordsStudent = new Records_Student("S9554212", "Annie","11/11/2000", "JavaScript Batch");
+
+        System.out.println("POJO : \n" + pojoStudent + "\n\nRecord : \n" +recordsStudent);
+
+        System.out.println("\n---------------------------");
+
+        //Accessor Methods
+        System.out.println("ACCESSOR DEMO");
+
+        System.out.println(pojoStudent.getName() + " is taking " + pojoStudent.getClassList());
+        System.out.println(recordsStudent.name() + " is taking " + recordsStudent.classList());
+
+        //Setters Methods
+        pojoStudent.setClassList("Spring Classes");
+        //recordsStudent.setClassList("Spring Classes"); // Records doesn't support setters as it is  private and final
+
+       }
 }
 
 
