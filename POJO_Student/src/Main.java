@@ -22,11 +22,11 @@ public class Main {
             System.out.println(s);
         }
         System.out.println("---------------------------\nDifferences | POJO vs Record\n");
-        Student pojoStudent = new Student("S9554215", "Ann","05/11/1997", "Python Batch");
+        Student pojoStudent = new Student("S9554215", "Ann", "05/11/1997", "Python Batch");
 
-        Records_Student recordsStudent = new Records_Student("S9554212", "Annie","11/11/2000", "JavaScript Batch");
+        Records_Student recordsStudent = new Records_Student("S9554212", "Annie", "11/11/2000", "JavaScript Batch");
 
-        System.out.println("POJO : \n" + pojoStudent + "\n\nRecord : \n" +recordsStudent);
+        System.out.println("POJO : \n" + pojoStudent + "\n\nRecord : \n" + recordsStudent);
 
         System.out.println("\n---------------------------");
 
@@ -38,9 +38,9 @@ public class Main {
 
         //Setters Methods
         pojoStudent.setClassList("Spring Classes");
-        //recordsStudent.setClassList("Spring Classes"); // Records doesn't support setters as it is  private and final
+        //recordsStudent.setClassList("Spring Classes"); // Records doesn't support setters as it is immutable and final. It doesn't have private fields
 
-       }
+    }
 }
 
 
