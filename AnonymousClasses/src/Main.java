@@ -3,6 +3,7 @@ public class Main {
 
         //Anonymous Classes with Concrete Class
         Animal myAnimal = new Animal() {
+            //Anonymous Classes even works without overriding any method.
             @Override
             public void makeNoise() {
                 System.out.println("Meow Meow");
