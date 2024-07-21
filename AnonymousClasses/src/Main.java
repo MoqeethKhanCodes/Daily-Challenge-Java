@@ -1,3 +1,12 @@
+/**
+ * Anonymous Classes:
+ * Anonymous classes in Java are inner classes without a declared name.
+ * These classes must be used to instantiate only one object ever.[Best Practise]
+ * They can be used to extend a superclass or implement an interface.
+ * Cannot Implement Multiple Interfaces.
+ * Lambda functions provide a more concise way to implement functional interfaces since Java 8.
+ */
+
 public class Main {
     public static void main(String[] args) {
 
@@ -19,5 +28,10 @@ public class Main {
             }
         };
         greeting.sayHello();
+
+        //or use lambda expression for anonymous classes
+        Runnable myAnonymousRunnable = () -> System.out.println("I'm an anonymous runnable");
+        myAnonymousRunnable.run();
+
     }
 }
