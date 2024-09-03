@@ -1,4 +1,4 @@
-package org.example;
+package org.course;
 
 public class MultiThreadingUsingImplements implements Runnable{
 
