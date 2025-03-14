@@ -1,0 +1,14 @@
+Q.1 What's a Text Block?
+--> A Text Block is just a special format for multi-line String literals.
+--> It's simply a String with a new representation in the source code.
+--> It became part of the official language as of JDK 15.
+
+Q.2 Some Common Escape Sequences
+--> An escape sequence starts with a backslash. Java has several, but the most common ones are shown on this slide.
+--> These include the tab, a newline, a double quote character, or a backslash character if you need it in your text.
+
+Q.3 Format Specifiers
+--> At their most complex, format specifiers take the form shown here.
+--> %[argument_index$][flags][width][.precision]conversion
+--> They start with a percent sign, and end with a conversion symbol, and have lots of options in between.
+--> I've looked at one conversion type, d, which is the symbol used for a decimal integer value.
