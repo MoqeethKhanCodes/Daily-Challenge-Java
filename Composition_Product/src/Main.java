@@ -11,6 +11,7 @@ public class Main {
 
         thePersonalComputer.getMonitor().drawPixelAt(10, 10, "red");
         thePersonalComputer.getMotherboard().loadProgram("Windows OS");
+        thePersonalComputer.getComputerCase().pressPowerButton();
 
     }
 }
