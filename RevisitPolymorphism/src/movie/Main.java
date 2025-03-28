@@ -1,6 +1,5 @@
 package movie;
 
-
 import java.util.Scanner;
 
 public class Main {
@@ -36,7 +35,7 @@ public class Main {
         while (true) {
             System.out.println("\nEnter Title Code : ");
 
-            System.out.printf("\t --- %s%n".repeat(4),
+            System.out.printf("\t• %s%n".repeat(4),
                     "A for Adventure",
                     "C for Comedy",
                     "S for Science Fiction",
