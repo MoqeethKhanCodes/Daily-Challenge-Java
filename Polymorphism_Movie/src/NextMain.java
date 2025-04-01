@@ -3,6 +3,8 @@ public class NextMain {
         Movie movie = Movie.getMovie("A", "Jaws");
         movie.watchMovie();
 
+        System.out.println("___________________");
+
         /** Movie Type cast to Adventure Type*/
         /*Adventure jaws = (Adventure) Movie.getMovie("C", "Jaws");
         jaws.watchMovie();*/ // ClassCastException
@@ -10,6 +12,8 @@ public class NextMain {
         /** Adventure Type cast to Movie Type*/
         Adventure jaws = (Adventure) Movie.getMovie("A", "Jaws");
         jaws.watchMovie();
+
+        System.out.println("___________________");
 
         /** Object Type cast to Movie Type - But calling Comedy method to a Movie Type*/
         /*
@@ -23,9 +27,23 @@ public class NextMain {
         Comedy comedyMovie = (Comedy) comedy;
         comedyMovie.watchComedy();
 
+        System.out.println("___________________");
+
         /** Local Variable Type Inference (LVTI) since Java 10 (See Generics)
          * var - Helps figure out compile-time type */
         var airplane = Movie.getMovie("C", "Jackie");
         airplane.watchMovie();
+
+        System.out.println("___________________");
+
+        Object unjnownObject = Movie.getMovie("C", "Airplane");
+        if(unjnownObject.getClass().getSimpleName() == "Comedy") {
+            Comedy c = (Comedy) unjnownObject;
+            c.watchComedy();
+        }else if (unjnownObject instanceof Adventure) { // InstanceOf
+            ((Adventure) unjnownObject).watchAdventure();
+        }else if (unjnownObject instanceof ScienceFiction scifi) { // Pattern Matching since JDK 16
+            scifi.watchFiction();
+        }
     }
 }
