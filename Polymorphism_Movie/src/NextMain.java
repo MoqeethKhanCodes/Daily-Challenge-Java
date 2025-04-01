@@ -37,7 +37,7 @@ public class NextMain {
         System.out.println("___________________");
 
         Object unjnownObject = Movie.getMovie("C", "Airplane");
-        if(unjnownObject.getClass().getSimpleName() == "Comedy") {
+        if(unjnownObject.getClass().getSimpleName().equalsIgnoreCase("Comedy")) {
             Comedy c = (Comedy) unjnownObject;
             c.watchComedy();
         }else if (unjnownObject instanceof Adventure) { // InstanceOf
